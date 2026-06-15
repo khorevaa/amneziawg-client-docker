@@ -26,6 +26,7 @@ ARG AWGTOOLS_RELEASE=1.0.20250706
 RUN apk --no-cache add \
     iproute2 \
     iptables \
+    iptables-legacy \
     bash \
     openresolv \
     dumb-init \
@@ -35,7 +36,8 @@ RUN apk --no-cache add \
     unzip \
     git \
     build-base \
-    linux-headers
+    linux-headers    
+    
 
 # build amneziawg-tools
 RUN git clone https://github.com/amnezia-vpn/amneziawg-tools.git /amneziawg-tools --depth=1 \
